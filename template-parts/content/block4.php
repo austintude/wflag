@@ -10,6 +10,6 @@ namespace WP_Rig\WP_Rig;
 ?>
 <section class="block4">
 	<?php
-		get_template_part( 'template-parts/content/carouselBlock' );
+		get_template_part( 'template-parts/content/sponsors' );
 	?>
 </section> <!-- end .block2 -->

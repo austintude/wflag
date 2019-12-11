@@ -6,32 +6,18 @@
  */
 
 namespace WP_Rig\WP_Rig;
+$hero_images	= get_field('hero_images');
 
 ?>
 
 <div class="site-branding">
-	<?php the_custom_logo(); ?>
+	<div id="mobileTopBar">
+	&nbsp;
+</div>
+<?php the_custom_logo(); ?>
+<div class="titleTagWrapper">
+		<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
+		<h2 class="tagline"><?php bloginfo( 'description' ); ?></h2>
+</div>
 
-	<?php
-	if ( is_front_page() && is_home() ) {
-		?>
-		<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-		<?php
-	} else {
-		?>
-		<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-		<?php
-	}
-	?>
-
-	<?php
-	$wp_rig_description = get_bloginfo( 'description', 'display' );
-	if ( $wp_rig_description || is_customize_preview() ) {
-		?>
-		<p class="site-description">
-			<?php echo $wp_rig_description; /* phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped */ ?>
-		</p>
-		<?php
-	}
-	?>
 </div><!-- .site-branding -->

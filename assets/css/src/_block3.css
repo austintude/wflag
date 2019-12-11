@@ -1,7 +1,7 @@
 .block3 {
 	display: flex;
 	flex-direction: column;
-	background: #ff9900;
+	background: linear-gradient(90deg,#f55050,#f18a22,#f2f21f,#00793f,#4040fc,#9e04bc);
 	margin: 0;
 	text-align: center;
 	padding: 2rem 0 3rem;

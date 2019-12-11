@@ -2,17 +2,28 @@
 @supports (grid-area:auto){
 	.onethreewrapper {
 		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+		"cta"
+		"right"
+		"left";
 		& .leftOneThirdBlock {
+			grid-area: left;
 		& img {
 		}
 	}
 	& .rightTwoThirdsBlock {
+		grid-area: right;
 	}
+	& .ctaButton {
+		background: #FD008F;
+		width: 100vw;
+			}
 	@media (--content-query) {
 		grid-template-columns: 50vw 45vw;
 		grid-template-areas:
-		"left right"
-		"cta cta";
+		"cta cta"
+		"left right";
 		grid-gap: 5vw;
 		& .leftOneThirdBlock  {
 			grid-area: right;
@@ -25,7 +36,7 @@
 			padding: 0 5vw;
 		}
 		& .ctaButton {
-grid-area: cta;
+	grid-area: cta;
 		}
 
 	}

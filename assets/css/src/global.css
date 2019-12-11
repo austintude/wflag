@@ -30,18 +30,20 @@
 @import "_block2.css";
 @import "_block3.css";
 @import "_block4.css";
-@import "__onethreewrapper.css";
-@import "__contentmiddleblock.css";
+@import "_cards.css";
+@import "_blockLayout.css";
+@import "_aSide.css";
+@import "_testimonials-template.css";
+@import "_home-testimonials-template.css";
+@import "_portfolio-template.css";
+@import "_gallery-template.css";
+@import "_custom-page-template.css";
+@import "_portfolio-child-template.css";
+@import "_ctaBlock.css";
+@import "_contact-template.css";
 @import "__contentmiddleblock2.css";
-@import "__carouselBlock.css";
-@import "_woocommerce-mods.css";
-@import "_about-mods.css";
-@import "_blog-mods.css";
-@import "_contact-mods.css";
-@import "_footer-block1.css";
-@import "_press-template.css";
-@import "_product-line-template.css";
 @import "_supports.css";
+
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -89,14 +91,14 @@
 # Layouts
 --------------------------------------------------------------*/
 .site {
-	margin: 0 auto;
+	/* margin: 0 auto; */
 	max-width: 100%;
 }
 
-@media (--sidebar-query) {
+/* @media (--sidebar-query) {
 
 	.has-sidebar .site {
-		margin: 0 0;
+		margin: 0 1em;
 		display: grid;
 		grid-template-columns: 3fr 1fr;
 		grid-gap: 2rem;
@@ -120,7 +122,7 @@
 	.site-footer {
 		grid-column: span 2;
 	}
-}
+} */
 
 /*--------------------------------------------------------------
 # Forms
@@ -140,7 +142,7 @@ input[type="submit"] {
 	border-color: #ccc #ccc #bbb;
 	border-radius: 3px;
 	background: #e6e6e6;
-	color: rgba(0, 0, 0, 0.8);
+	color: rgba(250, 250, 250, 0.8);
 	font-size: 0.75rem;
 	line-height: 1;
 	padding: 0.6em 1em 0.4em;
@@ -219,9 +221,9 @@ select {
 	padding-bottom: 1em;
 }
 
-/* .header-image {
-	margin: 0 auto;
-} */
+.header-image {
+	/* margin: 0 auto; */
+}
 
 /* .header-image img {
 	display: block;
@@ -235,7 +237,7 @@ select {
 
 .site-branding {
 	text-align: center;
-	/* padding: 60px 0 1.75em; */
+	padding: 0 0 1.75em;
 }
 
 .site-title {
@@ -243,9 +245,9 @@ select {
 	font-family: var(--highlight-font-family);
 	font-stretch: condensed;
 	font-size: 38px;
-	font-weight: 700;
+	/* font-weight: 700; */
 	line-height: 1.2;
-	color: #333332;
+	/* color: #333332; */
 }
 
 .site-title a {
@@ -269,13 +271,13 @@ select {
 --------------------------------------------------------------*/
 .nav--toggle-small .menu-toggle {
 	display: block;
-	margin: 1.2em auto;
+	margin: 0.5em auto;
 	padding: 0.6em 1.2em 0.5em;
 	font-family: var(--highlight-font-family);
 	font-stretch: condensed;
 	font-size: 80%;
 	text-transform: uppercase;
-	border: 2px solid #000;
+	border: 2px solid #fff;
 	border-radius: 0;
 	background: transparent;
 }
@@ -289,14 +291,14 @@ select {
 	display: none;
 }
 
-@media (--narrow-menu-query) {
+
 
 	.nav--toggle-small.nav--toggled-on .menu {
 		display: block;
 	}
-}
 
-@media (--wide-menu-query) {
+
+@media (--content-query) {
 
 	.nav--toggle-small .menu-toggle {
 		display: none;
@@ -402,7 +404,7 @@ select {
 	display: block;
 	margin: 0 auto 2em;
 	padding: 0 1em;
-	max-width: var(--content-width);
+	/* max-width: var(--content-width); */
 	font-family: var(--highlight-font-family);
 	font-stretch: condensed;
 }
@@ -412,12 +414,24 @@ select {
 	width: 100%;
 	padding: 0.5em 1em 0.5em 0;
 	text-decoration: none;
-	color: #000;
+	color: #f7f7f7;
+}
+.main-navigation ul li.current-menu-item {
+
+	& a {
+		color: #f7f7f7;
+	}
+	& a:after {
+		content: "";
+		display: block;
+		height: 4px;
+		background: linear-gradient(90deg, #F55050 0, #F18A22, #F2F21F, #00793F, #4040FC, #9E04BC);
+	}
 }
 
 .main-navigation a:hover,
 .main-navigation a:focus {
-	text-decoration: underline;
+	text-decoration: none;
 }
 
 .main-navigation ul {
@@ -431,7 +445,7 @@ select {
 	padding-left: 1em;
 }
 
-@media (--wide-menu-query) {
+@media (--content-query) {
 
 	.main-navigation ul li a {
 		padding: 0.4em 0.5em;
@@ -457,7 +471,7 @@ select {
 	/* stylelint-enable */
 
 	.main-navigation ul ul li a {
-		width: 218px;
+		/* width: 218px; */
 		background: none;
 	}
 
@@ -584,11 +598,14 @@ select {
 # Footer
 --------------------------------------------------------------*/
 .site-footer {
-	margin: 0 0 -1em;
-	padding: 2em 0;
+	/* margin: 0 0 0; */
+	padding: 0 0;
 	font-family: var(--highlight-font-family);
 	font-stretch: condensed;
-	background: rgba(255,255,255,.8);
+	@media (--content-query) {
+		margin: 1em 0 0;
+		padding: 2em 0;
+	}
 }
 
 .site-info {
@@ -613,3 +630,4 @@ were hidden (via .neverending) before. */
 .infinity-end.neverending .site-footer {
 	display: block;
 }
+
