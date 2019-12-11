@@ -25,6 +25,23 @@
 @import "_typography.css";
 @import "_elements.css";
 @import "_links.css";
+@import "_theme-specific-mods.css";
+@import "_block1.css";
+@import "_block2.css";
+@import "_block3.css";
+@import "_block4.css";
+@import "__onethreewrapper.css";
+@import "__contentmiddleblock.css";
+@import "__contentmiddleblock2.css";
+@import "__carouselBlock.css";
+@import "_woocommerce-mods.css";
+@import "_about-mods.css";
+@import "_blog-mods.css";
+@import "_contact-mods.css";
+@import "_footer-block1.css";
+@import "_press-template.css";
+@import "_product-line-template.css";
+@import "_supports.css";
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -79,7 +96,7 @@
 @media (--sidebar-query) {
 
 	.has-sidebar .site {
-		margin: 0 1em;
+		margin: 0 0;
 		display: grid;
 		grid-template-columns: 3fr 1fr;
 		grid-gap: 2rem;
@@ -202,14 +219,14 @@ select {
 	padding-bottom: 1em;
 }
 
-.header-image {
+/* .header-image {
 	margin: 0 auto;
-}
+} */
 
-.header-image img {
+/* .header-image img {
 	display: block;
 	margin: 0 auto;
-}
+} */
 
 .custom-logo-link {
 	display: inline-block;
@@ -218,7 +235,7 @@ select {
 
 .site-branding {
 	text-align: center;
-	padding: 60px 0 1.75em;
+	/* padding: 60px 0 1.75em; */
 }
 
 .site-title {
@@ -567,10 +584,11 @@ select {
 # Footer
 --------------------------------------------------------------*/
 .site-footer {
-	margin: 1em 0 0;
+	margin: 0 0 -1em;
 	padding: 2em 0;
 	font-family: var(--highlight-font-family);
 	font-stretch: condensed;
+	background: rgba(255,255,255,.8);
 }
 
 .site-info {

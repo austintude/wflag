@@ -1,1 +1,16 @@
-{}
+{
+  "theme": {
+      "slug": "wflag",
+      "name": "WFLAG",
+      "author": "Daniel Bisett",
+      "PHPNamespace": "WP_Rig\\WP_Rig"
+    },
+    "dev": {
+      "browserSync": {
+        "live": true,
+        "proxyURL": "wflag:8888",
+        "bypassPort": "8191",
+        "https": false
+      }
+}
+}
