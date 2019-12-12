@@ -1,5 +1,5 @@
 .archive.post-type-archive {
    & .site-footer {
-       margin: 0 2rem;
+       margin: 0;
     }
 }
