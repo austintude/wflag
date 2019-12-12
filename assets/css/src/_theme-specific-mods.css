@@ -552,17 +552,17 @@ justify-self: center;
 	}
 
 	& #themeLogo {
-		margin-top: 1rem;
-		margin-bottom: 2rem;
+		margin-top: 0;
+		margin-bottom: 1rem;
 
 		& amp-img {
 		max-width: 100%;
 		margin-left: auto;
 		top: 2rem;
 		position: relative;
-		width: 45vw;
+		width: 15vw;
 		@media (--content-query) {
-			width: 20vw;
+			width: 5vw;
 			& amp-img {
 				max-width: 50%;
 			}
