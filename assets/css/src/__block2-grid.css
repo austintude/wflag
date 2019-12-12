@@ -3,7 +3,7 @@
 		.block2 {
 		display: grid;
 		@media (--content-query) {
-			padding: 0;
+			/* padding: 0; */
 		}
 	}
 }

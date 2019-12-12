@@ -36,6 +36,9 @@
 		margin-left: auto;
 		margin-right: auto;
 		color: #f2f2f2f2;
+		& .ctaButton {
+			background: #fe0091;
+		}
 		& h2 {
 		text-shadow: 0em 0.1em 0.1em rgba(0,0,0,0.4);
 		}

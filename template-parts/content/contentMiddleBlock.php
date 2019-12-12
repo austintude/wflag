@@ -12,7 +12,6 @@ $block1_sectioncards	= get_field('block1_sectioncards');
 
 ?>
 
-<section class="block1" id="introduction">
 	<div class="sectionHeader">
 					<!-- <h2 class="serviceTitle" id="services">Services</h2> -->
 </div>
@@ -42,4 +41,3 @@ $block1_sectioncards	= get_field('block1_sectioncards');
 
 
                     </div>
-                </section>

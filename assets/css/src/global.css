@@ -242,7 +242,7 @@ select {
 
 .site-title {
 	margin: 0 1em;
-	font-family: var(--highlight-font-family);
+	/* font-family: var(--highlight-font-family); */
 	font-stretch: condensed;
 	font-size: 38px;
 	/* font-weight: 700; */
@@ -603,7 +603,7 @@ select {
 	font-family: var(--highlight-font-family);
 	font-stretch: condensed;
 	@media (--content-query) {
-		margin: 1em 0 0;
+		/* margin: 1em 0 0; */
 		padding: 2em 0;
 	}
 }
