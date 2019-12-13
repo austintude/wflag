@@ -7,7 +7,7 @@
 
  @font-face {
 	font-family: 'Blade Runner';
-	src: url('../fonts/blade-runner.ttf') format('truetype');
+	src: url('https://wflagtx.org/fonts/blade-runner.ttf') format('truetype');
   }
 
 :root {
