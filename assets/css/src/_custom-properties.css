@@ -5,6 +5,11 @@
  * @link: https://developer.mozilla.org/en-US/docs/Web/CSS/--*
  **/
 
+ @font-face {
+	font-family: 'Blade Runner';
+	src: url('../fonts/blade-runner.ttf') format('truetype');
+  }
+
 :root {
 	--global-font-color: #333;
 	--global-font-family: "Roboto Condensed", "Helvetica Neue", "Arial Narrow", sans-serif;
